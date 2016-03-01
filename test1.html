@@ -1,0 +1,92 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>Highcharts Example</title>
+		
+		
+		<!-- 1. Add these JavaScript inclusions in the head of your page -->
+	
+		
+		<!-- 2. Add the JavaScript to initialize the chart on document ready -->
+		<script>
+		var chart;
+		var chart2;
+		var chart3;
+		/**
+		 * Request data from the server, add it to the graph and set a timeout to request again
+		 */
+		function requestData() {
+			$.ajax({
+				url: 'live-data.php', 
+				type: 'GET',
+				data: {src:'live'},
+				success: function(point) {
+					var arr1 =  [point[0],point[1]];
+					var arr2 =  [point[2],point[3]];
+					var arr3 =  [point[4],point[5]];
+					
+					var series = chart.series[0],
+						shift = series.data.length > 20; // shift if the series is longer than 20
+		
+					// add the point
+					chart.series[0].addPoint(eval(arr1), true, shift);
+					var series2 = chart.series[0],
+						shift2 = series2.data.length > 20; // shift if the series is longer than 20
+		
+					// add the point
+					chart2.series[0].addPoint(eval(arr2), true, shift2);
+					
+					var series3 = chart.series[0],
+						shift3 = series3.data.length > 20; // shift if the series is longer than 20
+		
+					// add the point
+					chart3.series[0].addPoint(eval(arr3), true, shift3);
+					setTimeout(requestData, 1000);	
+				},
+				cache: false
+			});
+			
+			
+		}
+			
+		$(document).ready(function() {
+			chart = new Highcharts.Chart({
+				chart: {
+					renderTo: 'container',
+					defaultSeriesType: 'spline',
+					events: {
+						load: requestData
+					}
+				},
+				title: {
+					text: 'Test 1 Chart'
+				},
+				xAxis: {
+					type: 'datetime',
+					tickPixelInterval: 150,
+					maxZoom: 20 * 1000
+				},
+				yAxis: {
+					minPadding: 0.2,
+					maxPadding: 0.2,
+					title: {
+						text: 'Value',
+						margin: 80
+					}
+				},
+				series: [{
+					name: 'Random data',
+					data: []
+				}]
+			});		
+			
+			
+		});
+		</script>
+		
+	</head>
+	<body>
+		<div id="container" style="width: 100%; height: 300px; margin: 0 auto"></div>
+	</body>
+</html>
