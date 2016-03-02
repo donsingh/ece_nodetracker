@@ -1,5 +1,6 @@
 <html>
 	<head>
+		<!--Should be sent to .css-->
 		<style>
 			@font-face {
 				font-family: ledFont;
