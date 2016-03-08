@@ -54,3 +54,14 @@
 		</div>
 	</body>
 </html>
+<script type='text/javascript' src='js/jquery.min.js'></script>
+<script>
+$(document).ready(function(){
+	blink();
+});
+function blink()
+{
+	$("#top").fadeToggle("fast");
+	blink();
+}
+</script>
