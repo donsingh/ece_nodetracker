@@ -1,0 +1,70 @@
+@font-face {
+	font-family: ledFont;
+	src: url(../fonts/open24.ttf);
+}
+
+
+#bg {
+  position: scroll; 
+  margin-top: 100px; 
+  left: 0; 
+  width:100%;
+  z-index:-999;
+}
+.panel-heading{
+	padding:5px;
+	font-family:"Courier New";
+	font-size:1.5em;
+	text-align:center;
+	vertical-align:center;
+}
+.panel-body{
+	padding:0px 5px;
+	font-family:ledFont;
+	font-size:1.8em;
+	background-color:black;
+	color: rgb(67,228,2);
+	text-align:center;
+}
+
+.btn-group{
+	position:absolute;
+	top:150px;
+	left:30%;
+}
+.btn{
+	font-size:2em;
+}
+#title{
+	position:absolute;
+	top:0px;
+	margin:0px;
+	height:250px;
+	width:100%;
+	padding:25px;
+	text-align:center;
+	font-size:5em;
+}
+.container{
+	margin-top:300px;
+}
+.pane-1{
+	position:absolute;
+	top:560px;
+	left:960px;
+}
+.pane-2{
+	position:absolute;
+	top:560px;
+	left:1120px;
+}
+.pane-3{
+	position:absolute;
+	top:560px;
+	left:1280px;
+}
+.pane-4{
+	position:absolute;
+	top:720px;
+	left:905px;
+}

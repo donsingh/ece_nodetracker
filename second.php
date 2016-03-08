@@ -8,16 +8,16 @@
 
 		<!-- Bootstrap -->
 		<link href="css/bootstrap.min.css" rel="stylesheet">
-		<link href="css/floor_5_node.css" rel="stylesheet">
+		<link href="css/floor_4_node.css" rel="stylesheet">
 	</head>
 	<body>
-		<h1 id='title' class="bg-success">Fifth Floor Node Layout</h1>
+		<h1 id='title' class="bg-danger">Fourth Floor Node Layout</h1>
 		<div class="btn-group" role="group" aria-label="Default button group"> 
 			<a href="index.php"><button type="button" class="btn btn-default">THIRD FLOOR</button></a>
-			<a href="second.php"><button type="button" class="btn btn-default">FOURTH FLOOR</button></a>
-			<a href="third.php"><button type="button" class="btn btn-default active">FIFTH FLOOR</button></a> 
+			<a href="second.php"><button type="button" class="btn btn-default active">FOURTH FLOOR</button></a>
+			<a href="third.php"><button type="button" class="btn btn-default">FIFTH FLOOR</button></a> 
 		</div>
-		<img src="img/fifth.jpg" id="bg" alt="">
+		<img src="img/fourth.jpg" id="bg" alt="">
 		<div class="container">
 				<!--PANEL 1-->
 				<div class="panel panel-danger pane-1">
@@ -52,6 +52,16 @@
 				</div>
 				<!--END OF PANEL 3-->
 				
+				<!--PANEL 4-->
+				<div class="panel panel-danger pane-4">
+					<div class="panel-heading"> 
+						<h4 class="panel-title">Node <span class="badge">4</span></h4> 
+					</div> 
+					<div class="panel-body"> 
+						<span class="node-4-data">194.45</span> <span> V</span>
+					</div> 
+				</div>
+				<!--END OF PANEL 4-->
 				
 				
 		</div>
@@ -63,6 +73,7 @@ $(document).ready(function(){
 	setInterval(function(){blink(1)},1500);
 	setInterval(function(){blink(2)},1500);
 	setInterval(function(){blink(3)},1500);
+	setInterval(function(){blink(4)},1500);
 });
 function blink(tar)
 {
