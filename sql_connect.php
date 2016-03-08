@@ -1,5 +1,5 @@
 <?php
-$mysqli = new mysqli("localhost", "root", "", "dynacom_election");
+$mysqli = new mysqli("localhost", "root", "master", "node_data");
 
 	/* check connection */
 	if (mysqli_connect_errno()) {
