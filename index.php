@@ -25,7 +25,7 @@
 						<h3 class="panel-title">Node <span class="badge">1</span></h3>
 					</div>
 					<div class="panel-body">
-						<span class="node-1-data">292.25</span> <span> V</span>
+						<span class="node-1-data">292.25</span> <span> W</span>
 					</div>
 				</div>
 				<!--END OF PANEL 1-->
@@ -36,7 +36,7 @@
 						<h3 class="panel-title">Node <span class="badge">2</span></h3>
 					</div>
 					<div class="panel-body">
-						<span class="node-2-data">292.25</span> <span> V</span>
+						<span class="node-2-data">292.25</span> <span> W</span>
 					</div>
 				</div>
 				<!--END OF PANEL 2-->
@@ -47,7 +47,7 @@
 						<h3 class="panel-title">Node <span class="badge">3</span></h3>
 					</div>
 					<div class="panel-body">
-						<span class="node-3-data">393.35</span> <span> V</span>
+						<span class="node-3-data">393.35</span> <span> W</span>
 					</div>
 				</div>
 				<!--END OF PANEL 3-->
@@ -58,7 +58,7 @@
 						<h4 class="panel-title">Node <span class="badge">4</span></h4>
 					</div>
 					<div class="panel-body">
-						<span class="node-4-data">194.45</span> <span> V</span>
+						<span class="node-4-data">194.45</span> <span> W</span>
 					</div>
 				</div>
 				<!--END OF PANEL 4-->
@@ -69,7 +69,7 @@
 						<h5 class="panel-title">Node <span class="badge">5</span></h5>
 					</div>
 					<div class="panel-body">
-						<span class="node-5-data">195.55</span> <span> V</span>
+						<span class="node-5-data">195.55</span> <span> W</span>
 					</div>
 				</div>
 				<!--END OF PANEL 5-->
@@ -80,7 +80,7 @@
 						<h6 class="panel-title">Node <span class="badge">6</span></h6>
 					</div>
 					<div class="panel-body">
-						<span class="node-6-data">196.66</span> <span> V</span>
+						<span class="node-6-data">196.66</span> <span> W</span>
 					</div>
 				</div>
 				<!--END OF PANEL 6-->
@@ -91,7 +91,7 @@
 						<h7 class="panel-title">Node <span class="badge">7</span></h7>
 					</div>
 					<div class="panel-body">
-						<span class="node-7-data">197.77</span> <span> V</span>
+						<span class="node-7-data">197.77</span> <span> W</span>
 					</div>
 				</div>
 				<!--END OF PANEL 7-->
@@ -102,7 +102,7 @@
 						<h8 class="panel-title">Node <span class="badge">8</span></h8>
 					</div>
 					<div class="panel-body">
-						<span class="node-8-data">198.88</span> <span> V</span>
+						<span class="node-8-data">198.88</span> <span> W</span>
 					</div>
 				</div>
 				<!--END OF PANEL 8-->
@@ -113,7 +113,7 @@
 						<h9 class="panel-title">Node <span class="badge">9</span></h9>
 					</div>
 					<div class="panel-body">
-						<span class="node-9-data">199.99</span> <span> V</span>
+						<span class="node-9-data">199.99</span> <span> W</span>
 					</div>
 				</div>
 				<!--END OF PANEL 9-->
@@ -124,7 +124,7 @@
 						<h9 class="panel-title">Node <span class="badge">10</span></h9>
 					</div>
 					<div class="panel-body">
-						<span class="node-10-data">199.99</span> <span> V</span>
+						<span class="node-10-data">199.99</span> <span> W</span>
 					</div>
 				</div>
 				<!--END OF PANEL 10-->
@@ -134,7 +134,7 @@
 						<h3 class="panel-title">Node <span class="badge">11</span></h3>
 					</div>
 					<div class="panel-body">
-						<span class="node-11-data">191.11</span> <span> V</span>
+						<span class="node-11-data">191.11</span> <span> W</span>
 					</div>
 				</div>
 				<!--END OF PANEL 11-->
@@ -144,7 +144,7 @@
 <script type='text/javascript' src='js/jquery.min.js'></script>
 <script>
 $(document).ready(function(){
-	setInterval(function(){blink(23)},1500);
+	setInterval(function(){blink(32)},1500);
 	/*setInterval(function(){blink(2)},1500);
 	setInterval(function(){blink(3)},1500);
 	setInterval(function(){blink(4)},1500);
@@ -155,6 +155,11 @@ $(document).ready(function(){
 	setInterval(function(){blink(9)},1500);
 	setInterval(function(){blink(10)},1500);
 	setInterval(function(){blink(11)},1500);*/
+	$(".panel").click(function(){
+		var node = $(this).find(".badge").html();
+		var tbl = (node>25)?'single_phase':'three_phase';
+		window.location.href = 'chart3.php?table='+tbl+'&node='+node;
+	});
 });
 function blink(tar)
 {
@@ -166,10 +171,10 @@ function blink(tar)
 		  phase: 'single_phase',
 		  node: tar
 	   },
-		 dataType: 'json',
+       dataType: 'json',
 	   success: function(data) {
-			 tar = 1;
-		   $(".node-"+tar+"-data").text(data[4]);
+		 tar = 1;
+		 $(".node-"+tar+"-data").text(parseFloat(data[8]).toFixed(2));
 	   }
 	});
 }
