@@ -25,7 +25,7 @@
 						<h3 class="panel-title">Node <span class="badge">1</span></h3>
 					</div>
 					<div class="panel-body">
-						<span class="node-1-data">292.25</span> <span> W</span>
+						<span class="node-1-data"></span> <span> W</span>
 						<p style='font-size:0.5em;text-align:left;'>Read Time: <span class='node-1-time'> </span> </p>
 					</div>
 				</div>
@@ -37,7 +37,7 @@
 						<h3 class="panel-title">Node <span class="badge">2</span></h3>
 					</div>
 					<div class="panel-body">
-						<span class="node-2-data">292.25</span> <span> W</span>
+						<span class="node-2-data"></span> <span> W</span>
 						<p style='font-size:0.5em;text-align:left;'>Read Time: <span class='node-2-time'> </span> </p>
 					</div>
 				</div>
@@ -49,7 +49,7 @@
 						<h3 class="panel-title">Node <span class="badge">3</span></h3>
 					</div>
 					<div class="panel-body">
-						<span class="node-3-data">393.35</span> <span> W</span>
+						<span class="node-3-data"></span> <span> W</span>
 						<p style='font-size:0.5em;text-align:left;'>Read Time: <span class='node-3-time'> </span> </p>
 					</div>
 				</div>
@@ -58,26 +58,26 @@
 				<!--PANEL 4-->
 				<div class="panel panel-danger pane-4">
 					<div class="panel-heading">
-						<h4 class="panel-title">Node <span class="badge">4</span></h4>
+						<h3 class="panel-title">Node <span class="badge">4</span></h3>
 					</div>
 					<div class="panel-body">
-						<span class="node-4-data">194.45</span> <span> W</span>
+						<span class="node-4-data"></span> <span> W</span>
 						<p style='font-size:0.5em;text-align:left;'>Read Time: <span class='node-4-time'> </span> </p>
 					</div>
 				</div>
 				<!--END OF PANEL 4-->
 
-				<!--PANEL 5-->
-				<div class="panel panel-danger pane-5">
+				<!--PANEL 13-->
+				<div class="panel panel-danger pane-13">
 					<div class="panel-heading">
-						<h5 class="panel-title">Node <span class="badge">5</span></h5>
+						<h3 class="panel-title">Node <span class="badge">13</span></h3>
 					</div>
 					<div class="panel-body">
-						<span class="node-5-data">195.55</span> <span> W</span>
-						<p style='font-size:0.5em;text-align:left;'>Read Time: <span class='node-5-time'> </span> </p>
+						<span class="node-13-data"></span> <span> W</span>
+						<p style='font-size:0.5em;text-align:left;'>Read Time: <span class='node-13-time'> </span> </p>
 					</div>
 				</div>
-				<!--END OF PANEL 5-->
+				<!--END OF PANEL 13-->
 
 				<!--PANEL 6-->
 				<div class="panel panel-danger pane-6">
@@ -85,7 +85,7 @@
 						<h6 class="panel-title">Node <span class="badge">6</span></h6>
 					</div>
 					<div class="panel-body">
-						<span class="node-6-data">196.66</span> <span> W</span>
+						<span class="node-6-data"></span> <span> W</span>
 						<p style='font-size:0.5em;text-align:left;'>Read Time: <span class='node-6-time'> </span> </p>
 					</div>
 				</div>
@@ -97,35 +97,35 @@
 						<h7 class="panel-title">Node <span class="badge">7</span></h7>
 					</div>
 					<div class="panel-body">
-						<span class="node-7-data">197.77</span> <span> W</span>
+						<span class="node-7-data"></span> <span> W</span>
 						<p style='font-size:0.5em;text-align:left;'>Read Time: <span class='node-7-time'> </span> </p>
 					</div>
 				</div>
 				<!--END OF PANEL 7-->
 
-				<!--PANEL 8-->
-				<div class="panel panel-danger pane-8">
+				<!--PANEL 22-->
+				<div class="panel panel-danger pane-22">
 					<div class="panel-heading">
-						<h8 class="panel-title">Node <span class="badge">8</span></h8>
+						<h3 class="panel-title">Node <span class="badge">22</span></h3>
 					</div>
 					<div class="panel-body">
-						<span class="node-8-data">198.88</span> <span> W</span>
-						<p style='font-size:0.5em;text-align:left;'>Read Time: <span class='node-8-time'> </span> </p>
+						<span class="node-22-data"></span> <span> W</span>
+						<p style='font-size:0.5em;text-align:left;'>Read Time: <span class='node-22-time'> </span> </p>
 					</div>
 				</div>
-				<!--END OF PANEL 8-->
+				<!--END OF PANEL 22-->
 
-				<!--PANEL 9-->
-				<div class="panel panel-danger pane-9">
+				<!--PANEL 19-->
+				<div class="panel panel-danger pane-19">
 					<div class="panel-heading">
-						<h9 class="panel-title">Node <span class="badge">9</span></h9>
+						<h3 class="panel-title">Node <span class="badge">19</span></h3>
 					</div>
 					<div class="panel-body">
-						<span class="node-9-data">199.99</span> <span> W</span>
-						<p style='font-size:0.5em;text-align:left;'>Read Time: <span class='node-9-time'> </span> </p>
+						<span class="node-19-data"></span> <span> W</span>
+						<p style='font-size:0.5em;text-align:left;'>Read Time: <span class='node-19-time'> </span> </p>
 					</div>
 				</div>
-				<!--END OF PANEL 9-->
+				<!--END OF PANEL 19-->
 
 				<!--PANEL 10-->
 				<div class="panel panel-danger pane-10">
@@ -133,22 +133,44 @@
 						<h9 class="panel-title">Node <span class="badge">10</span></h9>
 					</div>
 					<div class="panel-body">
-						<span class="node-10-data">199.99</span> <span> W</span>
+						<span class="node-10-data"></span> <span> W</span>
 						<p style='font-size:0.5em;text-align:left;'>Read Time: <span class='node-10-time'> </span> </p>
 					</div>
 				</div>
 				<!--END OF PANEL 10-->
-				<!--PANEL 11-->
-				<div class="panel panel-danger pane-11">
+				<!--PANEL 20-->
+				<div class="panel panel-danger pane-20">
 					<div class="panel-heading">
-						<h3 class="panel-title">Node <span class="badge">11</span></h3>
+						<h3 class="panel-title">Node <span class="badge">20</span></h3>
 					</div>
 					<div class="panel-body">
-						<span class="node-11-data">191.11</span> <span> W</span>
-						<p style='font-size:0.5em;text-align:left;'>Read Time: <span class='node-11-time'> </span> </p>
+						<span class="node-20-data"></span> <span> W</span>
+						<p style='font-size:0.5em;text-align:left;'>Read Time: <span class='node-20-time'> </span> </p>
 					</div>
 				</div>
-				<!--END OF PANEL 11-->
+				<!--END OF PANEL 20-->
+				<!--PANEL 36-->
+				<div class="panel panel-danger pane-36">
+					<div class="panel-heading">
+						<h3 class="panel-title">Node <span class="badge">36</span></h3>
+					</div>
+					<div class="panel-body">
+						<span class="node-36-data"></span> <span> W</span>
+						<p style='font-size:0.5em;text-align:left;'>Read Time: <span class='node-36-time'> </span> </p>
+					</div>
+				</div>
+				<!--END OF PANEL 36-->
+				<!--PANEL 32-->
+				<div class="panel panel-danger pane-32">
+					<div class="panel-heading">
+						<h3 class="panel-title">Node <span class="badge">32</span></h3>
+					</div>
+					<div class="panel-body">
+						<span class="node-32-data"></span> <span> W</span>
+						<p style='font-size:0.5em;text-align:left;'>Read Time: <span class='node-32-time'> </span> </p>
+					</div>
+				</div>
+				<!--END OF PANEL 32-->
 		</div>
 	</body>
 </html>
@@ -161,13 +183,15 @@ $(document).ready(function(){
 	setInterval(function(){blink(2)},1500);
 	setInterval(function(){blink(3)},1500);
 	setInterval(function(){blink(4)},1500);
-	/*setInterval(function(){blink(5)},1500);
 	setInterval(function(){blink(6)},1500);
 	setInterval(function(){blink(7)},1500);
-	setInterval(function(){blink(8)},1500);
-	setInterval(function(){blink(9)},1500);
 	setInterval(function(){blink(10)},1500);
-	setInterval(function(){blink(11)},1500);*/
+	setInterval(function(){blink(13)},1500);
+	setInterval(function(){blink(19)},1500);
+	setInterval(function(){blink(20)},1500);
+	setInterval(function(){blink(22)},1500);
+	setInterval(function(){blink(32)},1500);
+	setInterval(function(){blink(36)},1500);
 	$(".panel").click(function(){
 		var node = $(this).find(".badge").html();
 		var tbl = (node>25)?'single_phase':'three_phase';

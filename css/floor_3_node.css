@@ -28,58 +28,76 @@
 }
 .pane-1{
 	position:absolute;
-	top:260px;
-	left:180px;
+	top:250px;
+	left:1160px;
 }
 .pane-2{
-	position:absolute;
-	top:330px;
-	left:310px;
-}
-.pane-3{
-	position:absolute;
-	top:450px;
-	left:310px;
-}
-.pane-4{
-	position:absolute;
-	top:630px;
-	left:300px;
-}
-.pane-5{
-	position:absolute;
-	top:1325px;
-	left:210px;
-}
-.pane-6{
-	position:absolute;
-	top:300px;
-	left:520px;
-}
-.pane-7{
-	position:absolute;
-	top:270px;
-	left:650px;
-}
-.pane-8{
-	position:absolute;
-	top:1220px;
-	left:590px;
-}
-.pane-9{
 	position:absolute;
 	top:250px;
 	left:1010px;
 }
+.pane-3{
+	/*position:absolute;
+	top:450px;
+	left:310px;*/
+	position:absolute;
+	top:1500px;
+	left:970px;
+}
+.pane-4{
+	/*
+	position:absolute;
+	top:630px;
+	left:300px;
+	*/
+	position:absolute;
+	top:270px;
+	left:650px;
+}
+.pane-13{
+	position:absolute;
+	top:725px;
+	left:310px;
+}
+.pane-6{
+	position:absolute;
+	top:1500px;
+	left:1190px;
+}
+.pane-7{
+	position:absolute;
+	top:260px;
+	left:180px;
+}
+.pane-22{
+	position:absolute;
+	top:1350px;
+	left:590px;
+}
+.pane-19{
+	position:absolute;
+	top:330px;
+	left:310px;
+}
 .pane-10{
 	position:absolute;
-	top:250px;
-	left:1160px;
+	top:420px;
+	left:520px;
 }
-.pane-11{
+.pane-20{
 	position:absolute;
-	top:1390px;
-	left:1090px;
+	top:815px;
+	left:310px;
+}
+.pane-32{
+	position:absolute;
+	top:815px;
+	left:110px;
+}
+.pane-36{
+	position:absolute;
+	top:725px;
+	left:110px;
 }
 .btn-group{
 	position:absolute;

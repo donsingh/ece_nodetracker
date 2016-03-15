@@ -90,6 +90,7 @@
 					<td>INDEX</td><td id='indx'></td><td>NODE</td><td id='loc'></td>
 					<td>DATE</td><td id='dit'></td><td>TIME</td><td id='dtime'></td>
 				</tr>
+				<?php if($tbl='three_phase'){echo "
 				<tr>
 					<td></td><td></td><td>VRMS1</td><td id='vrms1'></td><td>IRMS1</td><td id='irms1'></td>
 					<td>ACTP1</td><td id='actp1'></td>
@@ -102,6 +103,18 @@
 					<td></td><td></td><td></td><td></td><td></td><td></td>
 					<td>ACTPT</td><td id='actpt'></td>
 				</tr>
+				<!--END OF THREE PHASE-->
+				<!--INSERT CODE FOR SINGLE PHASE HERE-->
+				";}else{ echo "
+				<tr>
+					<td></td><td></td><td>VRMS</td><td id='vrms'></td><td>IRMS</td><td id='irms'></td>
+					<td>ACTP</td><td id='actp'></td>
+				</tr>
+				<tr>
+					<td>FREQ</td><td id='freq'></td><td>PWRF</td><td id='pwrf'></td>
+					<td>REAP</td><td id='reap'></td><td>APPP</td><td id='appp'></td>
+				</tr>
+				";}?>
 			</table>
         </div>
     </body>
@@ -139,7 +152,9 @@ $(function () {
 							success: function(point) {
 								//series.addPoint(point, true, true);
 								var pt = [point[0],point[1]];
+								
 								var fill = point[2];
+								
 								if(last!=fill[0]){
 									series.addPoint(pt, true, true);
 									last = fill[0];
@@ -149,13 +164,23 @@ $(function () {
 								$("#loc").html(fill[1]);
 								$("#dit").html(fill[2]);
 								$("#dtime").html(fill[3]);
-								$("#vrms1").html(fill[4]);
-								$("#irms1").html(fill[5]);
-								$("#actp1").html(fill[6]);
-								$("#vrms2").html(fill[7]);
-								$("#irms2").html(fill[8]);
-								$("#actp2").html(fill[9]);
-								$("#actpt").html(fill[10]);
+								if(fill[1]<25){
+									$("#vrms1").html(fill[4]);
+									$("#irms1").html(fill[5]);
+									$("#actp1").html(fill[6]);
+									$("#vrms2").html(fill[7]);
+									$("#irms2").html(fill[8]);
+									$("#actp2").html(fill[9]);
+									$("#actpt").html(fill[10]);
+								}else{
+									$("#vrms").html(fill[4]);
+									$("#irms").html(fill[5]);
+									$("#actp").html(fill[6]);
+									$("#freq").html(fill[7]);
+									$("#pwrf").html(fill[8]);
+									$("#reap").html(fill[9]);
+									$("#appp").html(fill[10]);
+								}
 							},
 							cache: false
 						});
@@ -169,7 +194,7 @@ $(function () {
             buttons: [{
                 count: 45,
                 type: 'minute',
-                text: '1 Hrs'
+                text: '1 Hr'
             }, {
                 count: 720,
                 type: 'minute',
