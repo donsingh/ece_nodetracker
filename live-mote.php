@@ -12,13 +12,20 @@
 	}else{
 		$tbl = 'single_phase';
 	}
-	$sql = "SELECT * FROM ".$tbl." WHERE date = '".$today."' ORDER BY indx DESC LIMIT 1";
+
+	if(isset($_GET['node'])){
+		$node = $_GET['node'];
+	}else{
+		$node = 1;
+	}
+
+	$sql = "SELECT * FROM ".$tbl." WHERE date = '".$today."' AND node=".$node." ORDER BY indx DESC LIMIT 1";
 	/*
 		$sql = "SELECT * FROM single_phase WHERE date='".$today."' AND node="" ORDER BY id DESC LIMIT 1";
 	*/
 	$result = mysqli_query($mysqli, $sql);
 	$row = mysqli_fetch_row($result);
-	$set = array((strtotime($row[2].$row[3])*1000.),intval(($row[1])),$row);
+	$set = array((strtotime($row[2].$row[3])*1000.),intval(($row[10])),$row);
 	
 	echo json_encode($set);
 ?>

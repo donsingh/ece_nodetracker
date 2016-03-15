@@ -12,8 +12,14 @@
 	}else{
 		$tbl = 'single_phase';
 	}
+
+	if(isset($_GET['node'])){
+		$node = $_GET['node'];
+	}else{
+		$node = 1;
+	}
 	
-	$sql = "SELECT * FROM ".$tbl." WHERE date = '".$today."' ORDER BY indx ASC";
+	$sql = "SELECT * FROM ".$tbl." WHERE date = '".$today."' AND node=".$node." ORDER BY indx ASC";
 	$ops = "SELECT date FROM ".$tbl." GROUP BY date";
 	$ops2 = mysqli_query($mysqli, $ops);
 	
@@ -23,12 +29,13 @@
 	}
 	$power = ($tbl=='single_phase')?'actp':'actpt';
 	$data = array();
+	$last =0;
 	while ($row = mysqli_fetch_array($result)) {
 	   $data[] = "[".(strtotime($row['date'].$row['time'])*1000.).",".$row[$power]."]";
 	   $last = $row[0];
 	}
 	$today = date("F j,Y",strtotime($today));
-	$some = (count($data)>0)?"Mote # data on ".$today:"NO DATA FOUND FOR ".$today;
+	$some = (count($data)>0)?"Mote # ".$node." data on ".$today:"NO DATA FOUND FOR ".$today;
 ?>
 <html>
     <head>
@@ -63,8 +70,11 @@
 			<div class="col-md-2">
 				<select class='form-control' id='chartDate'>
 					<?php
+						$temp = date("Y-m-d",strtotime($today));
 						while($dates = mysqli_fetch_array($ops2)){
-							echo "<option value='".$dates[0]."'>".date("F j, Y",strtotime($dates[0]))."</option>";
+							
+							$chk = ($dates[0]==$temp)?"selected='selected'":" ";
+							echo "<option value='".$dates[0]."' ".$chk.">".date("F j, Y",strtotime($dates[0]))."</option>";
 						}
 					?>
 				</select>
@@ -98,11 +108,12 @@
 </html>
 <script type='text/javascript' src='js/jquery.min.js'></script>
 <script type='text/javascript' src='js/highstock.js'></script>
+<script type='text/javascript' src='js/exporting.js'></script>
 <script>
-var last = <?php echo $last;?>;
+var last = <?php echo ($last!=0)?$last:0;?>;
 $(function () {
 	$("#chartDate").change(function(){
-		alert($(this).val());
+		window.location.href='chart3.php?table=<?php echo $tbl."&node=".$node;?>&date='+$(this).val();
 	});
     Highcharts.setOptions({
         global : {
@@ -122,13 +133,13 @@ $(function () {
 							type: 'GET',
 							data: {
 								table:'<?php echo $tbl;?>',
-								date:'<?php echo $today;?>'
+								date:'<?php echo $today;?>',
+								node:'<?php echo $node;?>'
 							},
 							success: function(point) {
 								//series.addPoint(point, true, true);
 								var pt = [point[0],point[1]];
 								var fill = point[2];
-								console.log(fill);
 								if(last!=fill[0]){
 									series.addPoint(pt, true, true);
 									last = fill[0];
@@ -178,7 +189,7 @@ $(function () {
                 }
 			}
         },
-		navigator:{
+		/*navigator:{
 			xAxis:{
 				dateTimeLabelFormats:{
 					millisecond: '%I:%M %P',
@@ -190,7 +201,7 @@ $(function () {
 					month: '%I:%M %P'
 				}
 			}
-		},
+		},*/
         title : {
             text : '<?php echo $some; ?>',
 			style: {
@@ -203,7 +214,7 @@ $(function () {
         exporting: {
             enabled: true
         },
-		xAxis:{
+		/*xAxis:{
 			dateTimeLabelFormats:{
 				millisecond: '%I:%M %P',
 				second: '%I:%M %P',
@@ -218,11 +229,15 @@ $(function () {
 		yAxis:{
 			crosshair: true,
 			
-		},
+		},*/
         series : [{
             name : 'Power Consumption: ',
             data: [<?php echo (count($data)>0)?join($data, ','):""; ?>],
-			pointStart: 0
+			pointStart: 0,
+			marker:{
+				enabled:true,
+				radius:2.5
+			}
         }]
     });
 

@@ -1,15 +1,8 @@
 @font-face {
 	font-family: ledFont;
-	src: url(../fonts/open24.ttf);
+	src: url(../fonts/ScreenMatrix.ttf);
 }
 
-#first{
-	height:300px;
-	background-color:black;
-	font-family: ledFont;
-	color: rgb(67,228,2);
-	font-size:10em;
-}
 #bg {
   position: scroll; 
   margin-top: 100px; 
@@ -17,6 +10,7 @@
   width:100%;
   z-index:-999;
 }
+
 .panel-heading{
 	padding:5px;
 	font-family:"Courier New";
@@ -26,66 +20,66 @@
 }
 .panel-body{
 	padding:0px 5px;
-	font-family:ledFont;
-	font-size:1.8em;
+	font-family:"Courier New";
+	font-size:1.4em;
 	background-color:black;
 	color: rgb(67,228,2);
 	text-align:center;
 }
 .pane-1{
 	position:absolute;
-	top:310px;
-	left:230px;
+	top:260px;
+	left:180px;
 }
 .pane-2{
 	position:absolute;
-	top:410px;
-	left:390px;
+	top:330px;
+	left:310px;
 }
 .pane-3{
 	position:absolute;
-	top:550px;
-	left:390px;
+	top:450px;
+	left:310px;
 }
 .pane-4{
 	position:absolute;
-	top:750px;
-	left:390px;
+	top:630px;
+	left:300px;
 }
 .pane-5{
 	position:absolute;
-	top:1775px;
-	left:260px;
+	top:1325px;
+	left:210px;
 }
 .pane-6{
 	position:absolute;
-	top:380px;
-	left:630px;
+	top:300px;
+	left:520px;
 }
 .pane-7{
 	position:absolute;
-	top:300px;
-	left:800px;
+	top:270px;
+	left:650px;
 }
 .pane-8{
 	position:absolute;
-	top:1640px;
-	left:770px;
+	top:1220px;
+	left:590px;
 }
 .pane-9{
 	position:absolute;
-	top:300px;
-	left:1300px;
+	top:250px;
+	left:1010px;
 }
 .pane-10{
 	position:absolute;
-	top:300px;
-	left:1450px;
+	top:250px;
+	left:1160px;
 }
 .pane-11{
 	position:absolute;
-	top:1855px;
-	left:1350px;
+	top:1390px;
+	left:1090px;
 }
 .btn-group{
 	position:absolute;

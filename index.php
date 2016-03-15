@@ -26,6 +26,7 @@
 					</div>
 					<div class="panel-body">
 						<span class="node-1-data">292.25</span> <span> W</span>
+						<p style='font-size:0.5em;text-align:left;'>Read Time: <span class='node-1-time'> </span> </p>
 					</div>
 				</div>
 				<!--END OF PANEL 1-->
@@ -37,6 +38,7 @@
 					</div>
 					<div class="panel-body">
 						<span class="node-2-data">292.25</span> <span> W</span>
+						<p style='font-size:0.5em;text-align:left;'>Read Time: <span class='node-2-time'> </span> </p>
 					</div>
 				</div>
 				<!--END OF PANEL 2-->
@@ -48,6 +50,7 @@
 					</div>
 					<div class="panel-body">
 						<span class="node-3-data">393.35</span> <span> W</span>
+						<p style='font-size:0.5em;text-align:left;'>Read Time: <span class='node-3-time'> </span> </p>
 					</div>
 				</div>
 				<!--END OF PANEL 3-->
@@ -59,6 +62,7 @@
 					</div>
 					<div class="panel-body">
 						<span class="node-4-data">194.45</span> <span> W</span>
+						<p style='font-size:0.5em;text-align:left;'>Read Time: <span class='node-4-time'> </span> </p>
 					</div>
 				</div>
 				<!--END OF PANEL 4-->
@@ -70,6 +74,7 @@
 					</div>
 					<div class="panel-body">
 						<span class="node-5-data">195.55</span> <span> W</span>
+						<p style='font-size:0.5em;text-align:left;'>Read Time: <span class='node-5-time'> </span> </p>
 					</div>
 				</div>
 				<!--END OF PANEL 5-->
@@ -81,6 +86,7 @@
 					</div>
 					<div class="panel-body">
 						<span class="node-6-data">196.66</span> <span> W</span>
+						<p style='font-size:0.5em;text-align:left;'>Read Time: <span class='node-6-time'> </span> </p>
 					</div>
 				</div>
 				<!--END OF PANEL 6-->
@@ -92,6 +98,7 @@
 					</div>
 					<div class="panel-body">
 						<span class="node-7-data">197.77</span> <span> W</span>
+						<p style='font-size:0.5em;text-align:left;'>Read Time: <span class='node-7-time'> </span> </p>
 					</div>
 				</div>
 				<!--END OF PANEL 7-->
@@ -103,6 +110,7 @@
 					</div>
 					<div class="panel-body">
 						<span class="node-8-data">198.88</span> <span> W</span>
+						<p style='font-size:0.5em;text-align:left;'>Read Time: <span class='node-8-time'> </span> </p>
 					</div>
 				</div>
 				<!--END OF PANEL 8-->
@@ -114,6 +122,7 @@
 					</div>
 					<div class="panel-body">
 						<span class="node-9-data">199.99</span> <span> W</span>
+						<p style='font-size:0.5em;text-align:left;'>Read Time: <span class='node-9-time'> </span> </p>
 					</div>
 				</div>
 				<!--END OF PANEL 9-->
@@ -125,6 +134,7 @@
 					</div>
 					<div class="panel-body">
 						<span class="node-10-data">199.99</span> <span> W</span>
+						<p style='font-size:0.5em;text-align:left;'>Read Time: <span class='node-10-time'> </span> </p>
 					</div>
 				</div>
 				<!--END OF PANEL 10-->
@@ -135,6 +145,7 @@
 					</div>
 					<div class="panel-body">
 						<span class="node-11-data">191.11</span> <span> W</span>
+						<p style='font-size:0.5em;text-align:left;'>Read Time: <span class='node-11-time'> </span> </p>
 					</div>
 				</div>
 				<!--END OF PANEL 11-->
@@ -144,11 +155,13 @@
 <script type='text/javascript' src='js/jquery.min.js'></script>
 <script>
 $(document).ready(function(){
-	setInterval(function(){blink(32)},1500);
-	/*setInterval(function(){blink(2)},1500);
+	
+  
+	setInterval(function(){blink(1)},1500);
+	setInterval(function(){blink(2)},1500);
 	setInterval(function(){blink(3)},1500);
 	setInterval(function(){blink(4)},1500);
-	setInterval(function(){blink(5)},1500);
+	/*setInterval(function(){blink(5)},1500);
 	setInterval(function(){blink(6)},1500);
 	setInterval(function(){blink(7)},1500);
 	setInterval(function(){blink(8)},1500);
@@ -166,15 +179,15 @@ function blink(tar)
 
    $.ajax({
 	   url: 'live.php',
-	   type: 'POST',
+	   type: 'GET',
 	   data: {
-		  phase: 'single_phase',
 		  node: tar
 	   },
        dataType: 'json',
 	   success: function(data) {
-		 tar = 1;
-		 $(".node-"+tar+"-data").text(parseFloat(data[8]).toFixed(2));
+		 console.log(data);
+		 $(".node-"+tar+"-data").text(parseFloat(data[10]).toFixed(2));
+		 $(".node-"+tar+"-time").text(data[3]);
 	   }
 	});
 }
