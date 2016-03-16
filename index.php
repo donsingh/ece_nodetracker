@@ -17,7 +17,7 @@
 			<a href="second.php"><button type="button" class="btn btn-default">FOURTH FLOOR</button></a>
 			<a href="third.php"><button type="button" class="btn btn-default">FIFTH FLOOR</button></a>
 		</div>
-		<img src="img/third.jpg" id="bg" alt="">
+		<img src="img/third_sm.jpg" id="bg" alt="">
 		<div class="container">
 				<!--PANEL 1-->
 				<div class="panel panel-danger pane-1">
@@ -209,7 +209,6 @@ function blink(tar)
 	   },
        dataType: 'json',
 	   success: function(data) {
-		 console.log(data);
 		 $(".node-"+tar+"-data").text(parseFloat(data[10]).toFixed(2));
 		 $(".node-"+tar+"-time").text(data[3]);
 	   }

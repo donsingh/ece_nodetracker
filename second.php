@@ -20,45 +20,73 @@
 		<img src="img/fourth.jpg" id="bg" alt="">
 		<div class="container">
 				<!--PANEL 1-->
-				<div class="panel panel-danger pane-1">
+				<div class="panel panel-danger pane-15">
 					<div class="panel-heading"> 
-						<h3 class="panel-title">Node <span class="badge">1</span></h3> 
+						<h3 class="panel-title">Node <span class="badge">15</span></h3> 
 					</div> 
 					<div class="panel-body"> 
-						<span class="node-1-data">292.25</span> <span> V</span>
+						<span class="node-15-data"></span> <span> V</span>
+						<p style='font-size:0.5em;text-align:left;'>Read Time: <span class='node-15-time'> </span> </p>
 					</div> 
 				</div>
 				<!--END OF PANEL 1-->
 				
 				<!--PANEL 2-->
-				<div class="panel panel-danger pane-2">
+				<div class="panel panel-danger pane-8">
 					<div class="panel-heading"> 
-						<h3 class="panel-title">Node <span class="badge">2</span></h3> 
+						<h3 class="panel-title">Node <span class="badge">8</span></h3> 
 					</div> 
 					<div class="panel-body"> 
-						<span class="node-2-data">292.25</span> <span> V</span>
+						<span class="node-8-data"></span> <span> V</span>
+						<p style='font-size:0.5em;text-align:left;'>Read Time: <span class='node-8-time'> </span> </p>
 					</div> 
 				</div>
 				<!--END OF PANEL 2-->
 				
 				<!--PANEL 3-->
-				<div class="panel panel-danger pane-3">
+				<div class="panel panel-danger pane-12">
 					<div class="panel-heading"> 
-						<h3 class="panel-title">Node <span class="badge">3</span></h3> 
+						<h3 class="panel-title">Node <span class="badge">12</span></h3> 
 					</div> 
 					<div class="panel-body"> 
-						<span class="node-3-data">393.35</span> <span> V</span>
+						<span class="node-12-data"></span> <span> V</span>
+						<p style='font-size:0.5em;text-align:left;'>Read Time: <span class='node-12-time'> </span> </p>
 					</div> 
 				</div>
 				<!--END OF PANEL 3-->
 				
 				<!--PANEL 4-->
-				<div class="panel panel-danger pane-4">
+				<div class="panel panel-danger pane-26">
 					<div class="panel-heading"> 
-						<h4 class="panel-title">Node <span class="badge">4</span></h4> 
+						<h3 class="panel-title">Node <span class="badge">26</span></h3> 
 					</div> 
 					<div class="panel-body"> 
-						<span class="node-4-data">194.45</span> <span> V</span>
+						<span class="node-26-data"></span> <span> V</span>
+						<p style='font-size:0.5em;text-align:left;'>Read Time: <span class='node-26-time'> </span> </p>
+					</div> 
+				</div>
+				<!--END OF PANEL 4-->
+				
+				<!--PANEL 4-->
+				<div class="panel panel-danger pane-27">
+					<div class="panel-heading"> 
+						<h4 class="panel-title">Node <span class="badge">27</span></h4> 
+					</div> 
+					<div class="panel-body"> 
+						<span class="node-27-data"></span> <span> V</span>
+						<p style='font-size:0.5em;text-align:left;'>Read Time: <span class='node-27-time'> </span> </p>
+					</div> 
+				</div>
+				<!--END OF PANEL 4-->
+				
+				<!--PANEL 4-->
+				<div class="panel panel-danger pane-28">
+					<div class="panel-heading"> 
+						<h4 class="panel-title">Node <span class="badge">28</span></h4> 
+					</div> 
+					<div class="panel-body"> 
+						<span class="node-28-data"></span> <span> V</span>
+						<p style='font-size:0.5em;text-align:left;'>Read Time: <span class='node-28-time'> </span> </p>
 					</div> 
 				</div>
 				<!--END OF PANEL 4-->
@@ -70,23 +98,31 @@
 <script type='text/javascript' src='js/jquery.min.js'></script>
 <script>
 $(document).ready(function(){
-	setInterval(function(){blink(1)},1500);
-	setInterval(function(){blink(2)},1500);
-	setInterval(function(){blink(3)},1500);
-	setInterval(function(){blink(4)},1500);
+	setInterval(function(){blink(15)},1500);
+	setInterval(function(){blink(8)},1500);
+	setInterval(function(){blink(12)},1500);
+	setInterval(function(){blink(26)},1500);
+	setInterval(function(){blink(27)},1500);
+	setInterval(function(){blink(28)},1500);
+	$(".panel").click(function(){
+		var node = $(this).find(".badge").html();
+		var tbl = (node>25)?'single_phase':'three_phase';
+		window.location.href = 'chart3.php?table='+tbl+'&node='+node;
+	});
 });
 function blink(tar)
 {
 	
-   $.ajax({
+  $.ajax({
 	   url: 'live.php',
-	   type: 'POST',
+	   type: 'GET',
 	   data: {
-		  floor: 3,
 		  node: tar
 	   },
+       dataType: 'json',
 	   success: function(data) {
-		  $(".node-"+tar+"-data").text(data);
+		 $(".node-"+tar+"-data").text(parseFloat(data[10]).toFixed(2));
+		 $(".node-"+tar+"-time").text(data[3]);
 	   }
 	});
 }

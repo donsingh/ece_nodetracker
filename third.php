@@ -20,34 +20,86 @@
 		<img src="img/fifth.jpg" id="bg" alt="">
 		<div class="container">
 				<!--PANEL 1-->
-				<div class="panel panel-danger pane-1">
+				<div class="panel panel-danger pane-54">
 					<div class="panel-heading"> 
-						<h3 class="panel-title">Node <span class="badge">1</span></h3> 
+						<h3 class="panel-title">Node <span class="badge">54</span></h3> 
 					</div> 
 					<div class="panel-body"> 
-						<span class="node-1-data">292.25</span> <span> V</span>
+						<span class="node-54-data"></span> <span> V</span>
+						<p style='font-size:0.5em;text-align:left;'>Read Time: <span class='node-54-time'> </span> </p>
 					</div> 
 				</div>
 				<!--END OF PANEL 1-->
 				
 				<!--PANEL 2-->
-				<div class="panel panel-danger pane-2">
+				<div class="panel panel-danger pane-18">
 					<div class="panel-heading"> 
-						<h3 class="panel-title">Node <span class="badge">2</span></h3> 
+						<h3 class="panel-title">Node <span class="badge">18</span></h3> 
 					</div> 
 					<div class="panel-body"> 
-						<span class="node-2-data">292.25</span> <span> V</span>
+						<span class="node-18-data"></span> <span> V</span>
+						<p style='font-size:0.5em;text-align:left;'>Read Time: <span class='node-18-time'> </span> </p>
 					</div> 
 				</div>
 				<!--END OF PANEL 2-->
 				
 				<!--PANEL 3-->
-				<div class="panel panel-danger pane-3">
+				<div class="panel panel-danger pane-52">
 					<div class="panel-heading"> 
-						<h3 class="panel-title">Node <span class="badge">3</span></h3> 
+						<h3 class="panel-title">Node <span class="badge">52</span></h3> 
 					</div> 
 					<div class="panel-body"> 
-						<span class="node-3-data">393.35</span> <span> V</span>
+						<span class="node-52-data"></span> <span> V</span>
+						<p style='font-size:0.5em;text-align:left;'>Read Time: <span class='node-52-time'> </span> </p>
+					</div> 
+				</div>
+				<!--END OF PANEL 3-->
+				
+				
+				<!--PANEL 1-->
+				<div class="panel panel-danger pane-53">
+					<div class="panel-heading"> 
+						<h3 class="panel-title">Node <span class="badge">53</span></h3> 
+					</div> 
+					<div class="panel-body"> 
+						<span class="node-53-data"></span> <span> V</span>
+						<p style='font-size:0.5em;text-align:left;'>Read Time: <span class='node-53-time'> </span> </p>
+					</div> 
+				</div>
+				<!--END OF PANEL 1-->
+				
+				<!--PANEL 2-->
+				<div class="panel panel-danger pane-49">
+					<div class="panel-heading"> 
+						<h3 class="panel-title">Node <span class="badge">49</span></h3> 
+					</div> 
+					<div class="panel-body"> 
+						<span class="node-49-data"></span> <span> V</span>
+						<p style='font-size:0.5em;text-align:left;'>Read Time: <span class='node-49-time'> </span> </p>
+					</div> 
+				</div>
+				<!--END OF PANEL 2-->
+				
+				<!--PANEL 3-->
+				<div class="panel panel-danger pane-50">
+					<div class="panel-heading"> 
+						<h3 class="panel-title">Node <span class="badge">50</span></h3> 
+					</div> 
+					<div class="panel-body"> 
+						<span class="node-50-data"></span> <span> V</span>
+						<p style='font-size:0.5em;text-align:left;'>Read Time: <span class='node-50-time'> </span> </p>
+					</div> 
+				</div>
+				<!--END OF PANEL 3-->
+				
+				<!--PANEL 3-->
+				<div class="panel panel-danger pane-51">
+					<div class="panel-heading"> 
+						<h3 class="panel-title">Node <span class="badge">51</span></h3> 
+					</div> 
+					<div class="panel-body"> 
+						<span class="node-51-data"></span> <span> V</span>
+						<p style='font-size:0.5em;text-align:left;'>Read Time: <span class='node-51-time'> </span> </p>
 					</div> 
 				</div>
 				<!--END OF PANEL 3-->
@@ -60,22 +112,32 @@
 <script type='text/javascript' src='js/jquery.min.js'></script>
 <script>
 $(document).ready(function(){
-	setInterval(function(){blink(1)},1500);
-	setInterval(function(){blink(2)},1500);
-	setInterval(function(){blink(3)},1500);
+	setInterval(function(){blink(54)},1500);
+	setInterval(function(){blink(18)},1500);
+	setInterval(function(){blink(52)},1500);
+	setInterval(function(){blink(53)},1500);
+	setInterval(function(){blink(49)},1500);
+	setInterval(function(){blink(50)},1500);
+	setInterval(function(){blink(51)},1500);
+	$(".panel").click(function(){
+		var node = $(this).find(".badge").html();
+		var tbl = (node>25)?'single_phase':'three_phase';
+		window.location.href = 'chart3.php?table='+tbl+'&node='+node;
+	});
 });
 function blink(tar)
 {
 	
    $.ajax({
 	   url: 'live.php',
-	   type: 'POST',
+	   type: 'GET',
 	   data: {
-		  floor: 3,
 		  node: tar
 	   },
+       dataType: 'json',
 	   success: function(data) {
-		  $(".node-"+tar+"-data").text(data);
+		 $(".node-"+tar+"-data").text(parseFloat(data[10]).toFixed(2));
+		 $(".node-"+tar+"-time").text(data[3]);
 	   }
 	});
 }

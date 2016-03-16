@@ -48,18 +48,38 @@
 .container{
 	margin-top:300px;
 }
-.pane-1{
+.pane-54{
 	position:absolute;
-	top:390px;
-	left:1020px;
+	top:290px;
+	left:670px;
 }
-.pane-2{
+.pane-18{
 	position:absolute;
-	top:520px;
-	left:940px;
+	top:290px;
+	left:800px;
 }
-.pane-3{
+.pane-52{
 	position:absolute;
-	top:520px;
-	left:1200px;
+	top:440px;
+	left:740px;
+}
+.pane-53{
+	position:absolute;
+	top:540px;
+	left:740px;
+}
+.pane-49{
+	position:absolute;
+	top:440px;
+	left:950px;
+}
+.pane-50{
+	position:absolute;
+	top:540px;
+	left:950px;
+}
+.pane-51{
+	position:absolute;
+	top:640px;
+	left:950px;
 }

@@ -48,23 +48,33 @@
 .container{
 	margin-top:300px;
 }
-.pane-1{
+.pane-15{
 	position:absolute;
-	top:560px;
-	left:960px;
+	top:400px;
+	left:730px;
 }
-.pane-2{
+.pane-8{
 	position:absolute;
-	top:560px;
-	left:1120px;
+	top:400px;
+	left:870px;
 }
-.pane-3{
+.pane-12{
 	position:absolute;
-	top:560px;
-	left:1280px;
+	top:400px;
+	left:1020px;
 }
-.pane-4{
+.pane-26{
 	position:absolute;
-	top:720px;
-	left:905px;
+	top:500px;
+	left:700px;
+}
+.pane-27{
+	position:absolute;
+	top:600px;
+	left:700px;
+}
+.pane-28{
+	position:absolute;
+	top:700px;
+	left:700px;
 }
