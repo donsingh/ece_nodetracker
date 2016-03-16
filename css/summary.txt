@@ -104,7 +104,7 @@
 	top:150px;
 	left:30%;
 }
-a > .btn{
+.btn{
 	font-size:2em;
 }
 #title{

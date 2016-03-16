@@ -17,6 +17,12 @@
 			<a href="second.php"><button type="button" class="btn btn-default">FOURTH FLOOR</button></a>
 			<a href="third.php"><button type="button" class="btn btn-default">FIFTH FLOOR</button></a>
 		</div>
+		<div class="btn-group" style="margin-left: 150px;margin-top:60px; width:100%; text-align:center;">
+			<button type="button" class="type gAll btn btn-default active"><span class="glyphicon glyphicon-th"></span> All</button>
+			<button type="button" class="type gAir btn btn-default"><span class="glyphicon glyphicon-tasks"></span> Aircon</button>
+			<button type="button" class="type gLit btn btn-default"><span class="glyphicon glyphicon-certificate"></span> Lights</button>
+			<button type="button" class="type gOut btn btn-default"><span class="glyphicon glyphicon-flash"></span> Outlets</button>
+		</div>
 		<img src="img/third_sm.jpg" id="bg" alt="">
 		<div class="container">
 				<!--PANEL 1-->
@@ -176,6 +182,9 @@
 </html>
 <script type='text/javascript' src='js/jquery.min.js'></script>
 <script>
+var aircon = [8,28,49,52,53,54,1,10,19,20];
+var lights = [27,18,2,4,7,36,32];
+var outlet = [12,15,26,50,51,3,6,22,13];
 $(document).ready(function(){
 	
   
@@ -196,6 +205,25 @@ $(document).ready(function(){
 		var node = $(this).find(".badge").html();
 		var tbl = (node>25)?'single_phase':'three_phase';
 		window.location.href = 'chart3.php?table='+tbl+'&node='+node;
+	});
+	$(".type").click(function(){
+		$(".panel").hide();
+		$(".type").removeClass("active");
+		if($(this).hasClass("gAll")){
+			$(".panel").show();
+		}else if($(this).hasClass("gAir")){
+			$.each(aircon,function(key,val){
+				$(".node-"+val+"-data").closest(".panel").show();
+			});
+		}else if($(this).hasClass("gLit")){
+			$.each(lights,function(key,val){
+				$(".node-"+val+"-data").closest(".panel").show();
+			});
+		}else if($(this).hasClass("gOut")){
+			$.each(outlet,function(key,val){
+				$(".node-"+val+"-data").closest(".panel").show();
+			});
+		}
 	});
 });
 function blink(tar)

@@ -8,7 +8,7 @@
 
 		<!-- Bootstrap -->
 		<link href="css/bootstrap.min.css" rel="stylesheet">
-		<link href="css/floor_3_node.css" rel="stylesheet">
+		<link href="css/summary.css" rel="stylesheet">
 		<style>
 			.container{
 				margin-top:300px;
@@ -25,6 +25,12 @@
 			<a href="index.php"><button type="button" class="btn btn-default">THIRD FLOOR</button></a>
 			<a href="second.php"><button type="button" class="btn btn-default">FOURTH FLOOR</button></a>
 			<a href="third.php"><button type="button" class="btn btn-default">FIFTH FLOOR</button></a> 
+		</div>
+		<div class="btn-group" style="margin-left: 150px;margin-top:110px; width:100%; text-align:center;">
+			<button type="button" class="type gAll btn btn-primary active"><span class="glyphicon glyphicon-th"></span> All</button>
+			<button type="button" class="type gAir btn btn-primary"><span class="glyphicon glyphicon-tasks"></span> Aircon</button>
+			<button type="button" class="type gLit btn btn-primary"><span class="glyphicon glyphicon-certificate"></span> Lights</button>
+			<button type="button" class="type gOut btn btn-primary"><span class="glyphicon glyphicon-flash"></span> Outlets</button>
 		</div>
 		<div class="container">
 			<div class="alert alert-success">
@@ -352,6 +358,10 @@
 </html>
 <script type='text/javascript' src='js/jquery.min.js'></script>
 <script>
+var aircon = [8,28,49,52,53,54,1,10,19,20];
+var lights = [27,18,2,4,7,36,32];
+var outlet = [12,15,26,50,51,3,6,22,13];
+
 $(document).ready(function(){
 	setInterval(function(){blink(1)},1500);
 	setInterval(function(){blink(2)},1500);
@@ -383,6 +393,26 @@ $(document).ready(function(){
 		var node = $(this).find(".badge").html();
 		var tbl = (node>25)?'single_phase':'three_phase';
 		window.location.href = 'chart3.php?table='+tbl+'&node='+node;
+	});
+	
+	$(".type").click(function(){
+		$(".col-md-3").hide();
+		$(".type").removeClass("active");
+		if($(this).hasClass("gAll")){
+			$(".col-md-3").show();
+		}else if($(this).hasClass("gAir")){
+			$.each(aircon,function(key,val){
+				$(".node-"+val+"-data").closest(".col-md-3").show();
+			});
+		}else if($(this).hasClass("gLit")){
+			$.each(lights,function(key,val){
+				$(".node-"+val+"-data").closest(".col-md-3").show();
+			});
+		}else if($(this).hasClass("gOut")){
+			$.each(outlet,function(key,val){
+				$(".node-"+val+"-data").closest(".col-md-3").show();
+			});
+		}
 	});
 });
 function blink(tar)

@@ -1,8 +1,7 @@
 @font-face {
 	font-family: ledFont;
-	src: url(../fonts/open24.ttf);
+	src: url(../fonts/ScreenMatrix.ttf);
 }
-
 
 #bg {
   position: scroll; 
@@ -11,6 +10,7 @@
   width:100%;
   z-index:-999;
 }
+
 .panel-heading{
 	padding:5px;
 	font-family:"Courier New";
@@ -20,13 +20,12 @@
 }
 .panel-body{
 	padding:0px 5px;
-	font-family:ledFont;
-	font-size:1.8em;
+	font-family:"Courier New";
+	font-size:1.4em;
 	background-color:black;
 	color: rgb(67,228,2);
 	text-align:center;
 }
-
 .btn-group{
 	position:absolute;
 	top:150px;
@@ -44,37 +43,4 @@ a > .btn{
 	padding:25px;
 	text-align:center;
 	font-size:5em;
-}
-.container{
-	margin-top:300px;
-}
-.pane-15{
-	position:absolute;
-	top:400px;
-	left:730px;
-}
-.pane-8{
-	position:absolute;
-	top:400px;
-	left:870px;
-}
-.pane-12{
-	position:absolute;
-	top:400px;
-	left:1020px;
-}
-.pane-26{
-	position:absolute;
-	top:500px;
-	left:700px;
-}
-.pane-27{
-	position:absolute;
-	top:600px;
-	left:700px;
-}
-.pane-28{
-	position:absolute;
-	top:700px;
-	left:700px;
 }
