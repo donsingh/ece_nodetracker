@@ -11,6 +11,7 @@
 		<link href="css/floor_3_node.css" rel="stylesheet">
 	</head>
 	<body>
+		
 		<h1 id='title' class="bg-primary">Third Floor Node Layout</h1>
 		<div class="btn-group" role="group" aria-label="Default button group">
 			<a href="index.php"><button type="button" class="btn btn-default active">THIRD FLOOR</button></a>
@@ -23,6 +24,9 @@
 			<button type="button" class="type gLit btn btn-default"><span class="glyphicon glyphicon-certificate"></span> Lights</button>
 			<button type="button" class="type gOut btn btn-default"><span class="glyphicon glyphicon-flash"></span> Outlets</button>
 		</div>
+		<a href="summary.php"><button class="btn btn-lg btn-danger" style="position:absolute;right:15;top:15;">
+			<span class="glyphicon glyphicon-share"></span> Summary
+		</button></a>
 		<img src="img/third_sm.jpg" id="bg" alt="">
 		<div class="container">
 				<!--PANEL 1-->
@@ -237,7 +241,11 @@ function blink(tar)
 	   },
        dataType: 'json',
 	   success: function(data) {
-		 $(".node-"+tar+"-data").text(parseFloat(data[10]).toFixed(2));
+		 if(tar>25){
+			$(".node-"+tar+"-data").text(parseFloat(data[8]).toFixed(2));
+		 }else{
+			$(".node-"+tar+"-data").text(parseFloat(data[10]).toFixed(2));
+		 }
 		 $(".node-"+tar+"-time").text(data[3]);
 	   }
 	});

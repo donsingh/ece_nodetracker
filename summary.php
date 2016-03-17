@@ -39,7 +39,7 @@
 					<div class="col-md-3">
 						<div class="panel panel-primary"> 
 							<div class="panel-heading"> 
-								<h3 class="panel-title">Node 1</h3>
+								<h3 class="panel-title">Node<span class="badge">1</span></h3>
 							</div> 
 							<div class="panel-body"> 
 								<span class="node-1-data"></span><span> V</span>
@@ -50,7 +50,7 @@
 					<div class="col-md-3">
 						<div class="panel panel-primary"> 
 							<div class="panel-heading"> 
-								<h3 class="panel-title">Node 2</h3>
+								<h3 class="panel-title">Node<span class="badge">2</span></h3>
 							</div> 
 							<div class="panel-body"> 
 								<span class="node-2-data"></span><span> V</span>
@@ -61,7 +61,7 @@
 					<div class="col-md-3">
 						<div class="panel panel-primary"> 
 							<div class="panel-heading"> 
-								<h3 class="panel-title">Node 3</h3>
+								<h3 class="panel-title">Node<span class="badge">3</span></h3>
 							</div> 
 							<div class="panel-body"> 
 								<span class="node-3-data"></span><span> V</span>
@@ -72,7 +72,7 @@
 					<div class="col-md-3">
 						<div class="panel panel-primary"> 
 							<div class="panel-heading"> 
-								<h3 class="panel-title">Node 4</h3>
+								<h3 class="panel-title">Node<span class="badge">4</span></h3>
 							</div> 
 							<div class="panel-body"> 
 								<span class="node-4-data"></span><span> V</span>
@@ -85,7 +85,7 @@
 					<div class="col-md-3">
 						<div class="panel panel-primary"> 
 							<div class="panel-heading"> 
-								<h3 class="panel-title">Node 19</h3>
+								<h3 class="panel-title">Node<span class="badge">19</span></h3>
 							</div> 
 							<div class="panel-body"> 
 								
@@ -97,7 +97,7 @@
 					<div class="col-md-3">
 						<div class="panel panel-primary"> 
 							<div class="panel-heading"> 
-								<h3 class="panel-title">Node 6</h3>
+								<h3 class="panel-title">Node<span class="badge">6</span></h3>
 							</div> 
 							<div class="panel-body"> 
 								<span class="node-6-data"></span><span> V</span>
@@ -108,7 +108,7 @@
 					<div class="col-md-3">
 						<div class="panel panel-primary"> 
 							<div class="panel-heading"> 
-								<h3 class="panel-title">Node 7</h3>
+								<h3 class="panel-title">Node<span class="badge">7</span></h3>
 							</div> 
 							<div class="panel-body"> 
 								<span class="node-7-data"></span><span> V</span>
@@ -119,7 +119,7 @@
 					<div class="col-md-3">
 						<div class="panel panel-primary"> 
 							<div class="panel-heading"> 
-								<h3 class="panel-title">Node 13</h3>
+								<h3 class="panel-title">Node<span class="badge">13</span></h3>
 							</div> 
 							<div class="panel-body"> 
 								<span class="node-13-data"></span><span> V</span>
@@ -132,7 +132,7 @@
 					<div class="col-md-3">
 						<div class="panel panel-primary"> 
 							<div class="panel-heading"> 
-								<h3 class="panel-title">Node 20</h3>
+								<h3 class="panel-title">Node<span class="badge">20</span></h3>
 							</div> 
 							<div class="panel-body"> 
 								<span class="node-20-data"></span><span> V</span>
@@ -143,7 +143,7 @@
 					<div class="col-md-3">
 						<div class="panel panel-primary"> 
 							<div class="panel-heading"> 
-								<h3 class="panel-title">Node 10</h3>
+								<h3 class="panel-title">Node<span class="badge">10</span></h3>
 							</div> 
 							<div class="panel-body"> 
 								<span class="node-10-data"></span><span> V</span>
@@ -154,7 +154,7 @@
 					<div class="col-md-3">
 						<div class="panel panel-primary"> 
 							<div class="panel-heading"> 
-								<h3 class="panel-title">Node 22</h3>
+								<h3 class="panel-title">Node<span class="badge">22</span></h3>
 							</div> 
 							<div class="panel-body"> 
 								<span class="node-22-data"></span><span> V</span>
@@ -165,7 +165,7 @@
 					<div class="col-md-3">
 						<div class="panel panel-primary"> 
 							<div class="panel-heading"> 
-								<h3 class="panel-title">Node 36</h3>
+								<h3 class="panel-title">Node<span class="badge">36</span></h3>
 							</div> 
 							<div class="panel-body"> 
 								<span class="node-36-data"></span><span> V</span>
@@ -178,7 +178,7 @@
 					<div class="col-md-3">
 						<div class="panel panel-primary"> 
 							<div class="panel-heading"> 
-								<h3 class="panel-title">Node 32</h3>
+								<h3 class="panel-title">Node<span class="badge">32</span></h3>
 							</div> 
 							<div class="panel-body"> 
 								<span class="node-32-data"></span><span> V</span>
@@ -196,7 +196,7 @@
 					<div class="col-md-3">
 						<div class="panel panel-primary"> 
 							<div class="panel-heading"> 
-								<h3 class="panel-title">Node 15</h3>
+								<h3 class="panel-title">Node<span class="badge">15</span></h3>
 							</div> 
 							<div class="panel-body"> 
 								
@@ -208,7 +208,7 @@
 					<div class="col-md-3">
 						<div class="panel panel-primary"> 
 							<div class="panel-heading"> 
-								<h3 class="panel-title">Node 8</h3>
+								<h3 class="panel-title">Node<span class="badge">8</span></h3>
 							</div> 
 							<div class="panel-body"> 
 								<span class="node-8-data"></span><span> V</span>
@@ -219,7 +219,7 @@
 					<div class="col-md-3">
 						<div class="panel panel-primary"> 
 							<div class="panel-heading"> 
-								<h3 class="panel-title">Node 12</h3>
+								<h3 class="panel-title">Node<span class="badge">12</span></h3>
 							</div> 
 							<div class="panel-body"> 
 								<span class="node-12-data"></span><span> V</span>
@@ -230,7 +230,7 @@
 					<div class="col-md-3">
 						<div class="panel panel-primary"> 
 							<div class="panel-heading"> 
-								<h3 class="panel-title">Node 26</h3>
+								<h3 class="panel-title">Node<span class="badge">26</span></h3>
 							</div> 
 							<div class="panel-body"> 
 								<span class="node-26-data"></span><span> V</span>
@@ -243,7 +243,7 @@
 					<div class="col-md-3">
 						<div class="panel panel-primary"> 
 							<div class="panel-heading"> 
-								<h3 class="panel-title">Node 27</h3>
+								<h3 class="panel-title">Node<span class="badge">27</span></h3>
 							</div> 
 							<div class="panel-body"> 
 								<span class="node-27-data"></span><span> V</span>
@@ -254,7 +254,7 @@
 					<div class="col-md-3">
 						<div class="panel panel-primary"> 
 							<div class="panel-heading"> 
-								<h3 class="panel-title">Node 28</h3>
+								<h3 class="panel-title">Node<span class="badge">28</span></h3>
 							</div> 
 							<div class="panel-body"> 
 								<span class="node-28-data"></span><span> V</span>
@@ -273,7 +273,7 @@
 					<div class="col-md-3">
 						<div class="panel panel-primary"> 
 							<div class="panel-heading"> 
-								<h3 class="panel-title">Node 54</h3>
+								<h3 class="panel-title">Node<span class="badge">54</span></h3>
 							</div> 
 							<div class="panel-body"> 
 								
@@ -285,7 +285,7 @@
 					<div class="col-md-3">
 						<div class="panel panel-primary"> 
 							<div class="panel-heading"> 
-								<h3 class="panel-title">Node 18</h3>
+								<h3 class="panel-title">Node<span class="badge">18</span></h3>
 							</div> 
 							<div class="panel-body"> 
 								<span class="node-18-data"></span><span> V</span>
@@ -296,7 +296,7 @@
 					<div class="col-md-3">
 						<div class="panel panel-primary"> 
 							<div class="panel-heading"> 
-								<h3 class="panel-title">Node 52</h3>
+								<h3 class="panel-title">Node<span class="badge">52</span></h3>
 							</div> 
 							<div class="panel-body"> 
 								<span class="node-52-data"></span><span> V</span>
@@ -307,7 +307,7 @@
 					<div class="col-md-3">
 						<div class="panel panel-primary"> 
 							<div class="panel-heading"> 
-								<h3 class="panel-title">Node 53</h3>
+								<h3 class="panel-title">Node<span class="badge">53</span></h3>
 							</div> 
 							<div class="panel-body"> 
 								<span class="node-53-data"></span><span> V</span>
@@ -320,7 +320,7 @@
 					<div class="col-md-3">
 						<div class="panel panel-primary"> 
 							<div class="panel-heading"> 
-								<h3 class="panel-title">Node 49</h3>
+								<h3 class="panel-title">Node<span class="badge">49</span></h3>
 							</div> 
 							<div class="panel-body"> 
 								<span class="node-49-data"></span><span> V</span>
@@ -331,7 +331,7 @@
 					<div class="col-md-3">
 						<div class="panel panel-primary"> 
 							<div class="panel-heading"> 
-								<h3 class="panel-title">Node 50</h3>
+								<h3 class="panel-title">Node<span class="badge">50</span></h3>
 							</div> 
 							<div class="panel-body"> 
 								<span class="node-50-data"></span><span> V</span>
@@ -342,7 +342,7 @@
 					<div class="col-md-3">
 						<div class="panel panel-primary"> 
 							<div class="panel-heading"> 
-								<h3 class="panel-title">Node 51</h3>
+								<h3 class="panel-title">Node<span class="badge">51</span></h3>
 							</div> 
 							<div class="panel-body"> 
 								<span class="node-51-data"></span><span> V</span>
