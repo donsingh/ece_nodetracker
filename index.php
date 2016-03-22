@@ -9,14 +9,29 @@
 		<!-- Bootstrap -->
 		<link href="css/bootstrap.min.css" rel="stylesheet">
 		<link href="css/floor_3_node.css" rel="stylesheet">
+		<style>
+		.fixed-time{
+		  position:fixed;
+   		  top: 30%;
+		  right: 2%;
+		}
+		</style>
 	</head>
 	<body>
 		
 		<h1 id='title' class="bg-primary">Third Floor Node Layout</h1>
-		<div class="btn-group" role="group" aria-label="Default button group">
-			<a href="index.php"><button type="button" class="btn btn-default active">THIRD FLOOR</button></a>
+		<!--<div class="btn-group" role="group" aria-label="Default button group"> 
+			<a href="index.php"><button type="button" class="btn btn-default">THIRD FLOOR</button></a>
 			<a href="second.php"><button type="button" class="btn btn-default">FOURTH FLOOR</button></a>
-			<a href="third.php"><button type="button" class="btn btn-default">FIFTH FLOOR</button></a>
+			<a href="third.php"><button type="button" class="btn btn-default active">FIFTH FLOOR</button></a> 
+		</div>-->
+		<div class="btn-group" role="group" aria-label="Default button group">
+			<a href="http://10.4.192.30/index.php"><button type="button" class="btn btn-default">THIRD FLOOR</button></a>
+			<a href="http://10.4.192.89/second.php"><button type="button" class="btn btn-default">FOURTH FLOOR</button></a>
+			<a href="http://10.4.192.88/third.php"><button type="button" class="btn btn-default active">FIFTH FLOOR</button></a>
+		</div>
+		<div class="fixed-time alert alert-info">
+			<span class="glyphicon glyphicon-time"><span> Server Time: </span><span class="this-time"></span>
 		</div>
 		<div class="btn-group" style="margin-left: 150px;margin-top:60px; width:100%; text-align:center;">
 			<button type="button" class="type gAll btn btn-default active"><span class="glyphicon glyphicon-th"></span> All</button>
@@ -247,6 +262,7 @@ function blink(tar)
 			$(".node-"+tar+"-data").text(parseFloat(data[10]).toFixed(2));
 		 }
 		 $(".node-"+tar+"-time").text(data[3]);
+		 $(".this-time").text(data[11]);
 	   }
 	});
 }
