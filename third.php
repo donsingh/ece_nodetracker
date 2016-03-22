@@ -9,13 +9,25 @@
 		<!-- Bootstrap -->
 		<link href="css/bootstrap.min.css" rel="stylesheet">
 		<link href="css/floor_5_node.css" rel="stylesheet">
+		<style>
+		.fixed-time{
+		  position:fixed;
+   		  top: 30%;
+		  right: 2%;
+		}
+		</style>
 	</head>
 	<body>
 		<h1 id='title' class="bg-success">Fifth Floor Node Layout</h1>
-		<div class="btn-group" role="group" aria-label="Default button group"> 
+		<!--<div class="btn-group" role="group" aria-label="Default button group"> 
 			<a href="index.php"><button type="button" class="btn btn-default">THIRD FLOOR</button></a>
 			<a href="second.php"><button type="button" class="btn btn-default">FOURTH FLOOR</button></a>
 			<a href="third.php"><button type="button" class="btn btn-default active">FIFTH FLOOR</button></a> 
+		</div>-->
+		<div class="btn-group" role="group" aria-label="Default button group">
+			<a href="http://10.4.192.30/index.php"><button type="button" class="btn btn-default">THIRD FLOOR</button></a>
+			<a href="http://10.4.192.89/second.php"><button type="button" class="btn btn-default">FOURTH FLOOR</button></a>
+			<a href="http://10.4.192.88/third.php"><button type="button" class="btn btn-default active">FIFTH FLOOR</button></a>
 		</div>
 		<div class="btn-group" style="margin-left: 150px;margin-top:60px; width:100%; text-align:center;">
 			<button type="button" class="type gAll btn btn-default active"><span class="glyphicon glyphicon-th"></span> All</button>
@@ -27,6 +39,9 @@
 			<span class="glyphicon glyphicon-share"></span> Summary
 		</button></a>
 		<img src="img/fifth.jpg" id="bg" alt="">
+		<div class="fixed-time alert alert-info">
+			<span class="glyphicon glyphicon-time"><span> Server Time: </span><span class="this-time"></span>
+		</div>
 		<div class="container">
 				<!--PANEL 1-->
 				<div class="panel panel-danger pane-54">
@@ -34,7 +49,7 @@
 						<h3 class="panel-title">Node <span class="badge">54</span></h3> 
 					</div> 
 					<div class="panel-body"> 
-						<span class="node-54-data"></span> <span> V</span>
+						<span class="node-54-data"></span> <span> W</span>
 						<p style='font-size:0.5em;text-align:left;'>Read Time: <span class='node-54-time'> </span> </p>
 					</div> 
 				</div>
@@ -46,7 +61,7 @@
 						<h3 class="panel-title">Node <span class="badge">18</span></h3> 
 					</div> 
 					<div class="panel-body"> 
-						<span class="node-18-data"></span> <span> V</span>
+						<span class="node-18-data"></span> <span> W</span>
 						<p style='font-size:0.5em;text-align:left;'>Read Time: <span class='node-18-time'> </span> </p>
 					</div> 
 				</div>
@@ -71,7 +86,7 @@
 						<h3 class="panel-title">Node <span class="badge">53</span></h3> 
 					</div> 
 					<div class="panel-body"> 
-						<span class="node-53-data"></span> <span> V</span>
+						<span class="node-53-data"></span> <span> W</span>
 						<p style='font-size:0.5em;text-align:left;'>Read Time: <span class='node-53-time'> </span> </p>
 					</div> 
 				</div>
@@ -83,7 +98,7 @@
 						<h3 class="panel-title">Node <span class="badge">49</span></h3> 
 					</div> 
 					<div class="panel-body"> 
-						<span class="node-49-data"></span> <span> V</span>
+						<span class="node-49-data"></span> <span> W</span>
 						<p style='font-size:0.5em;text-align:left;'>Read Time: <span class='node-49-time'> </span> </p>
 					</div> 
 				</div>
@@ -95,7 +110,7 @@
 						<h3 class="panel-title">Node <span class="badge">50</span></h3> 
 					</div> 
 					<div class="panel-body"> 
-						<span class="node-50-data"></span> <span> V</span>
+						<span class="node-50-data"></span> <span> W</span>
 						<p style='font-size:0.5em;text-align:left;'>Read Time: <span class='node-50-time'> </span> </p>
 					</div> 
 				</div>
@@ -107,7 +122,7 @@
 						<h3 class="panel-title">Node <span class="badge">51</span></h3> 
 					</div> 
 					<div class="panel-body"> 
-						<span class="node-51-data"></span> <span> V</span>
+						<span class="node-51-data"></span> <span> W</span>
 						<p style='font-size:0.5em;text-align:left;'>Read Time: <span class='node-51-time'> </span> </p>
 					</div> 
 				</div>
@@ -173,6 +188,7 @@ function blink(tar)
 			$(".node-"+tar+"-data").text(parseFloat(data[10]).toFixed(2));
 		 }
 		 $(".node-"+tar+"-time").text(data[3]);
+		$(".this-time").text(data[11]);
 	   }
 	});
 }

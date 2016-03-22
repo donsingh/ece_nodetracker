@@ -1,5 +1,5 @@
 <?php
-	$mysqli = new mysqli("localhost", "root", "", "node_data");
+	$mysqli = new mysqli("localhost", "root", "power", "node_data");
 	date_default_timezone_set('Asia/Manila');
 	/* check connection */
 	if (mysqli_connect_errno()) {
