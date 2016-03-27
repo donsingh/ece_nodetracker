@@ -1,0 +1,80 @@
+
+#bg {
+  position: scroll; 
+  margin-top: 100px; 
+  left: 0; 
+  width:100%;
+  z-index:-999;
+}
+.panel-heading{
+	padding:5px;
+	font-family:"Courier New" !important;
+	font-size:1.5em;
+	text-align:center;
+	vertical-align:center;
+}
+.panel-body{
+	padding:0px 5px;
+	font-family:"Courier New" !important;
+	font-size:1.4em;
+	background-color:black;
+	color: rgb(67,228,2);
+	text-align:center;
+}
+
+.btn-group{
+	position:absolute;
+	top:150px;
+	left:30%;
+}
+a > .btn{
+	font-size:2em;
+}
+#title{
+	position:absolute;
+	top:0px;
+	margin:0px;
+	height:250px;
+	width:100%;
+	padding:25px;
+	text-align:center;
+	font-size:5em;
+}
+.container{
+	margin-top:300px;
+}
+.pane-54{
+	position:absolute;
+	top:290px;
+	left:670px;
+}
+.pane-18{
+	position:absolute;
+	top:290px;
+	left:800px;
+}
+.pane-52{
+	position:absolute;
+	top:440px;
+	left:740px;
+}
+.pane-53{
+	position:absolute;
+	top:540px;
+	left:740px;
+}
+.pane-49{
+	position:absolute;
+	top:440px;
+	left:950px;
+}
+.pane-50{
+	position:absolute;
+	top:540px;
+	left:950px;
+}
+.pane-51{
+	position:absolute;
+	top:640px;
+	left:950px;
+}

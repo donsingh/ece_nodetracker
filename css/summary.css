@@ -1,0 +1,46 @@
+@font-face {
+	font-family: ledFont;
+	src: url(../fonts/ScreenMatrix.ttf);
+}
+
+#bg {
+  position: scroll; 
+  margin-top: 100px; 
+  left: 0; 
+  width:100%;
+  z-index:-999;
+}
+
+.panel-heading{
+	padding:5px;
+	font-family:"Courier New";
+	font-size:1.5em;
+	text-align:center;
+	vertical-align:center;
+}
+.panel-body{
+	padding:0px 5px;
+	font-family:"Courier New";
+	font-size:1.4em;
+	background-color:black;
+	color: rgb(67,228,2);
+	text-align:center;
+}
+.btn-group{
+	position:absolute;
+	top:150px;
+	left:30%;
+}
+a > .btn{
+	font-size:2em;
+}
+#title{
+	position:absolute;
+	top:0px;
+	margin:0px;
+	height:250px;
+	width:100%;
+	padding:25px;
+	text-align:center;
+	font-size:5em;
+}

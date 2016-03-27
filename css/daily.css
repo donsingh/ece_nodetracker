@@ -1,0 +1,15 @@
+#title{
+	position:absolute;
+	top:0px;
+	margin:0px;
+	height:250px !important;
+	width:100%;
+	padding:25px;
+	text-align:center;
+	font-size:3em;
+}
+
+#chart{
+	margin-left:5%;
+	margin-right:5%;
+}
